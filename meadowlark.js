@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
-app.set('port', process.env.PORT || 3000);
+//app.set('port', process.env.PORT || 3000);
+var port = (process.env.PORT || 3000);
 // custom 404 page
 app.use(function(req, res){
 res.type('text/plain');
@@ -14,7 +15,6 @@ res.type('text/plain');
 res.status(500);
 res.send('500 - Server Error');
 });
-app.listen(app.get('port'), function(){
-console.log( 'Express started on http://localhost:' +
-app.get('port') + '; press Ctrl-C to terminate.' );
+app.listen(port, function(){
+console.log( 'Express started on http://localhost:' + port + '; press Ctrl-C to terminate.' );
 });
