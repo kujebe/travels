@@ -8,7 +8,8 @@ app.set('view engine', 'handlebars');
 
 
 //Middlewares
-app.use(express.static(__dirname + /'public'));
+app.use(express.static(__dirname + '/public'));
+
 
 //Home Page
 app.get('/',function(req, res){
