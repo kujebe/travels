@@ -7,6 +7,9 @@ app.engine('handlebars',handlebars.engine);
 app.set('view engine', 'handlebars');
 
 
+//Middlewares
+app.use(express.static(__dirname + /'public'));
+
 //Home Page
 app.get('/',function(req, res){
     res.render('home');
@@ -17,7 +20,7 @@ app.get('/about',function(req, res){
     res.render('about');
 })
 // custom 404 page
-app.use(function(req, res){
+app.use(function(req, res, next){
    res.status(400);
    res.render('404');
 });
