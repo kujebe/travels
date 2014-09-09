@@ -17,9 +17,10 @@
   },
   "homepage": "https://github.com/kujebe/travels",
   "dependencies": {
-    "express": "^4.8.8"
+    "express": "^4.8.8",
+    "express-handlebars": "^1.0.3.5.2"
   },
-    "engines": {
+  "engines": {
     "node": "0.10.x"
   }
 }
