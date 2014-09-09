@@ -8,3 +8,4 @@ Procfile~
 *.#
 *.handlebars#
 .#meadowlark.js
+*.swp
