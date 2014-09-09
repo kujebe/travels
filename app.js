@@ -6,6 +6,13 @@ var port = process.env.PORT || 3000;
 app.engine('handlebars',handlebars.engine);
 app.set('view engine', 'handlebars');
 
+var fortunes = [
+"Conquer your fears or they will conquer you.",
+"Rivers need springs.",
+"Do not fear what you don't know.",
+"You will have a pleasant surprise.",
+"Whenever possible, keep it simple.",
+];
 
 //Middlewares
 app.use(express.static(__dirname + '/public'));
