@@ -6,6 +6,16 @@ var port = process.env.PORT || 3000;
 app.engine('handlebars',handlebars.engine);
 app.set('view engine', 'handlebars');
 
+
+//Home Page
+app.get('/',function(req, res){
+    res.render('home');
+});
+
+//About Us Page
+app.get('/about',function(req, res){
+    res.render('about');
+})
 // custom 404 page
 app.use(function(req, res){
     res.type('text/plain');
