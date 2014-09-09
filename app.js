@@ -24,10 +24,13 @@ app.get('/',function(req, res){
 });
 
 //About Us Page
-app.get('/about',function(req, res){
-    res.render('about');
-})
-// custom 404 page
+app.get('/about', function(req, res){
+   var randomFortune =
+    fortunes[Math.floor(Math.random() * fortunes.length)];
+    res.render('about', { fortune: randomFortune });
+});
+
+//Custom 404 page
 app.use(function(req, res, next){
    res.status(400);
    res.render('404');
