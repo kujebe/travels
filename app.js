@@ -18,12 +18,14 @@ app.get('/about',function(req, res){
 })
 // custom 404 page
 app.use(function(req, res){
-    res.render('404');
+   res.status(400);
+   res.render('404');
 });
 
 // custom 500 page
 app.use(function(err, req, res, next){
     console.error(err.stack);
+    res.status(500);
     res.render('505');
 });
 app.listen(port, function(){
